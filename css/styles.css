@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  background-color: #000000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.space {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.space__planet-first {
+  position: absolute;
+  right: 180px;
+  bottom: -60px;
+  width: 75vh;
+  animation: space__planet-first 620s linear 0s infinite;
+  z-index: 4;
+}
+
+@keyframes space__planet-first {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.space__planet-second {
+  position: absolute;
+  top: 50px;
+  left: 270px;
+  width: 30vh;
+  animation: space__planet-second 220s linear 0s infinite;
+  z-index: 3;
+}
+
+@keyframes space__planet-second {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.space__stars {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/stars.png");
+  background-repeat: repeat;
+  z-index: 1;
+}
+
+.space__twinkling {
+  position: absolute;
+  width: 10000px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-image: url("../img/twinkling.png");
+  background-size: 1000px 1000px;
+  background-color: transparent;
+  background-repeat: repeat;
+  animation: space__twinkling 50s linear infinite;
+  z-index: 2;
+}
+
+@keyframes space__twinkling {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
